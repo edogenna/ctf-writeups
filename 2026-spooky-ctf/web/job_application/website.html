@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0173)http://18.217.64.238/RUVFRUVFRUVFZWVFRWVFRUVFRUVFRUVFRWVlRUVFRWVFRUVFRUVFRUVlZUVFZUVFRUVFRUVFRUVFRWVFZWVFZUVFRUVFRUVFRWVlRUVFZUVFRUVFRUVFRUVlZUVlZWVlRUVFRUVFRUVFZWVFRWVFRQ== -->
+<html class=" cfhkqzkwg idc0_350"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="./aa_files/styles.css">
+    </head>
+    <body><img id="doge" src="./aa_files/doge.jpg" alt="wow doge">
+    <div id="dogeTextContainer"></div>
+    
+        <div id="uglyWow">WOW!!!</div>
+        <button type="button" id="uglyButton" onclick="generateJoke()">Generate Joke</button>    
+        <h3> It’s not a dad bod it’s a father figure.         </h3>
+    
+    <marquee id="uglyMarquee">CLICK THE BUTTON AND TELL A GREAT JOKE TODAY</marquee>
+    <div id="warningBox">!!! EXTREME JOKE ZONE !!!</div>
+    <script src="./aa_files/testindex2.js"></script>
+    <script>
+        function generateJoke(){
+            let number = Math.floor(Math.random() * textData.length);
+
+            const joke = textData[number];
+
+            const newURL = getNewURL(joke);
+
+            window.location.href=newURL;
+
+        }
+
+        function getNewURL(jokeHash){
+            const baseURL = window.location.origin;
+
+            const newURL = new URL(jokeHash, baseURL);
+
+            return newURL.toString();
+        }
+        const dogePhrases = [
+            "so funny",
+            "much joke",
+            "wow",
+            "very humor",
+            "such laugh",
+            "amaze"
+        ];
+
+        setInterval(() => {
+            const phrase = document.createElement("div");
+            phrase.className = "dogePhrase";
+            phrase.innerText = dogePhrases[Math.floor(Math.random() * dogePhrases.length)];
+
+            document.body.appendChild(phrase);
+
+            phrase.style.left = Math.random() * window.innerWidth + "px";
+            phrase.style.top = Math.random() * window.innerHeight + "px";
+
+            setTimeout(() => phrase.remove(), 3000);
+        }, 500);
+    </script>
+<div class="dogePhrase" style="left: 1204.95px; top: 447.488px;">such laugh</div><div class="dogePhrase" style="left: 492.484px; top: 487.98px;">very humor</div><div class="dogePhrase" style="left: 464.506px; top: 516.045px;">so funny</div><div class="dogePhrase" style="left: 36.5901px; top: 807.172px;">much joke</div><div class="dogePhrase" style="left: 771.908px; top: 225.117px;">so funny</div><div class="dogePhrase" style="left: 29.9797px; top: 306.694px;">so funny</div></body></html>
